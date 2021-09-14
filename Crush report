@@ -1,0 +1,233 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  XaeroMinimapPlugin (Xaeros_Minimap_21.1.1_Forge_1.12 (1).jar)
+  SteveKunGLibPlugin (SteveKunG's-Lib-1.12.2-1.1.9.jar)
+  ObfuscatePlugin (obfuscate-0.4.2-mc1.12.2.jar)
+  Techguns Core (techguns-1.12.2-2.0.1.1.jar)
+  McLib core mod (mclib-2.2-1.12.2.jar)
+  CreativePatchingLoader (CreativeCore_v1.9.37_mc1.12.2.jar)
+  CTMCorePlugin (CTM-MC1.12.2-0.3.3.22.jar)
+  LittlePatchingLoader (LittleTiles-Mod-1.12.2.jar)
+  ForgelinPlugin (Forgelin-1.8.3.jar)
+  Plugin (NotEnoughIDs-1.5.4.4.jar)
+  MicdoodlePlugin (MicdoodleCore-1.12.2-4.0.2.281.jar)
+  BlockbusterCore (blockbuster-2.2-1.12.2.jar)
+  SecretRoomsMod-Core (Secret-Rooms-Mod-1.12.2.jar)
+  MalisisCorePlugin (malisiscore-1.12.2-6.5.1.jar)
+  BetterFoliageLoader (BetterFoliage-MC1.12-2.2.0.jar)
+  weaponlib (mw_2.0-0.4.4.6_mc1.12.2.jar)
+  IGCMPatchingLoader (IGCM_v1.2.8_mc1.12.2.jar)
+  MovingWorldCore (movingworld-1.12-6.342-full.jar)
+  ColorUtilityCorePlugin (ColorUtility-universal-1.0.4.jar)
+  LoadingPlugin (ChunkAnimator-MC1.12-1.2.jar)
+Contact their authors BEFORE contacting forge
+
+// Don't do that.
+
+Time: 14/09/21 23.21
+Description: Exception in server tick loop
+
+java.lang.NoClassDefFoundError: net/minecraft/client/renderer/ItemMeshDefinition
+	at mod.mcreator.coloredwatermod.<init>(coloredwatermod.java:39)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at net.minecraftforge.fml.common.ILanguageAdapter$JavaAdapter.getNewInstance(ILanguageAdapter.java:191)
+	at net.minecraftforge.fml.common.FMLModContainer.constructMod(FMLModContainer.java:599)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:219)
+	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:197)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:136)
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:595)
+	at net.minecraftforge.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:98)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:333)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:125)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:486)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: net.minecraft.client.renderer.ItemMeshDefinition
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:191)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 38 more
+Caused by: java.lang.NullPointerException
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:182)
+	... 40 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (x86) version 10.0
+	Java Version: 1.8.0_291, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) Client VM (mixed mode, sharing), Oracle Corporation
+	Memory: 99858096 bytes (95 MB) / 259522560 bytes (247 MB) up to 259522560 bytes (247 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2855 85 mods loaded, 83 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State | ID                                           | Version               | Source                                            | Signature                                |
+	|:----- |:-------------------------------------------- |:--------------------- |:------------------------------------------------- |:---------------------------------------- |
+	| LC    | minecraft                                    | 1.12.2                | minecraft.jar                                     | None                                     |
+	| LC    | mcp                                          | 9.42                  | minecraft.jar                                     | None                                     |
+	| LC    | FML                                          | 8.0.99.99             | forge-1.12.2-14.23.5.2855.jar                     | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LC    | forge                                        | 14.23.5.2855          | forge-1.12.2-14.23.5.2855.jar                     | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LC    | ColorUtility                                 | 1.0.4                 | minecraft.jar                                     | None                                     |
+	| LC    | creativecoredummy                            | 1.0.0                 | minecraft.jar                                     | None                                     |
+	| LC    | littletilescore                              | 1.0.0                 | minecraft.jar                                     | None                                     |
+	| LC    | micdoodlecore                                |                       | minecraft.jar                                     | None                                     |
+	| LC    | xaerominimap_core                            | 1.12.2-1.0            | minecraft.jar                                     | None                                     |
+	| LC    | com.elytradev.movingworld.common.asm.coremod |                       | minecraft.jar                                     | None                                     |
+	| LC    | obfuscate                                    | 0.4.2                 | minecraft.jar                                     | None                                     |
+	| LC    | srm-hooks                                    | 1.12.2-1.0.0          | minecraft.jar                                     | None                                     |
+	| LC    | techguns_core                                | 1.12.2-1.0            | minecraft.jar                                     | None                                     |
+	| LC    | securitycraft                                | v1.8.12               | [1.12.2]+SecurityCraft+v1.8.12.jar                | None                                     |
+	| LC    | versionchecker                               | @VERSION@             | [1.12.2]+VersionChecker-1.4.0.jar                 | None                                     |
+	| LC    | mclib                                        | 2.2                   | mclib-2.2-1.12.2.jar                              | None                                     |
+	| LC    | aperture                                     | 1.5.1                 | aperture-1.5.1-1.12.2 (1).jar                     | None                                     |
+	| LC    | architecturecraft                            | @VERSION@             | architecturecraft-1.12-3.80.jar                   | None                                     |
+	| LC    | bettercaves                                  | 1.12.2                | bettercaves-1.12.2-2.0.4.jar                      | None                                     |
+	| LC    | bibliocraft                                  | 2.4.5                 | BiblioCraft[v2.4.5][MC1.12.2].jar                 | None                                     |
+	| LC    | biomesoplenty                                | 7.0.1.2425            | BiomesOPlenty-1.12.2-7.0.1.2425-universal.jar     | None                                     |
+	| LC    | moreplayermodels                             | 1.12.2                | More-Player-Models-Mod-1.12.2.jar                 | None                                     |
+	| LC    | metamorph                                    | 1.2.5                 | metamorph-1.2.5-1.12.2.jar                        | None                                     |
+	| LC    | blockbuster                                  | 2.2                   | blockbuster-2.2-1.12.2.jar                        | None                                     |
+	| LC    | blockcraftery                                | 1.12.2-1.3.1          | blockcraftery-1.12.2-1.3.1.jar                    | None                                     |
+	| LC    | carpentersblocks                             | 3.4.0-poc.6           | Carpenter's Blocks v3.4.0-poc.6 - MC 1.12.2.jar   | None                                     |
+	| LC    | caves_and_cliffs                             | 1.0.9                 | CC(FG1.12.2)+1.0.9.jar                            | None                                     |
+	| LC    | cdm                                          | 0.4.1                 | cdm-0.4.1-mc1.12.2.jar                            | None                                     |
+	| LC    | cgm                                          | 0.15.3                | cgm-0.15.3-mc1.12.2.jar                           | None                                     |
+	| LC    | chinjufumod                                  | 3.2.2                 | ChinjufuMod[1.12.2]3.2.2.jar                      | None                                     |
+	| LC    | chisel                                       | MC1.12.2-0.2.1.35     | Chisel-MC1.12.2-0.2.1.35.jar                      | None                                     |
+	| LC    | chiselsandbits                               | 14.32                 | chiselsandbits-14.32.jar                          | None                                     |
+	| L     | coloredwatermod                              | 1.0.0                 | Colored+Water+Mod.jar                             | None                                     |
+	| L     | cosmicnpcs                                   | 1.2.1                 | CosmicNPCs-1.2.1-mc1.12.2.jar                     | None                                     |
+	| L     | igcm                                         | 1.2.2                 | IGCM_v1.2.8_mc1.12.2.jar                          | None                                     |
+	| L     | creativecore                                 | 1.9.9                 | CreativeCore_v1.9.37_mc1.12.2.jar                 | None                                     |
+	| L     | modcurrency                                  | 1.12-1.3.9            | Currency-1.12.0-1.3.9.jar                         | None                                     |
+	| L     | customnpcs                                   | 1.12                  | CustomNPCs_1.12.2(30Jan19).jar                    | None                                     |
+	| L     | movingworld                                  | 1.12-6.342            | movingworld-1.12-6.342-full.jar                   | None                                     |
+	| L     | davincisvessels                              | @DVESSELSVER@         | davincisvessels-1.12-6.340-full.jar               | None                                     |
+	| L     | props                                        | 2.6.3.7               | Decocraft-2.6.3.7_1.12.2.jar                      | None                                     |
+	| L     | galacticraftcore                             | 4.0.2.281             | GalacticraftCore-1.12.2-4.0.2.281 (1).jar         | None                                     |
+	| L     | extrabitmanipulation                         | 1.12.2-3.4.1          | ExtraBitManipulation-1.12.2-3.4.1.jar             | None                                     |
+	| L     | galacticraftplanets                          | 4.0.2.281             | Galacticraft-Planets-1.12.2-4.0.2.281 (1).jar     | None                                     |
+	| L     | mjrlegendslib                                | 1.12.2-1.2.0          | MJRLegendsLib-1.12.2-1.2.0.jar                    | None                                     |
+	| L     | extraplanets                                 | 1.12.2-0.7.0          | ExtraPlanets-1.12.2-0.7.0.jar                     | None                                     |
+	| L     | fcl                                          | XII.43                | Fexcraft+Common+Library-XII.43.jar                | None                                     |
+	| L     | famm                                         | 3.2.1                 | FAMM-3.2.1-1.12.jar                               | None                                     |
+	| L     | fmr                                          | 1.0                   | Fexcraft+Common+Library-XII.43.jar                | None                                     |
+	| L     | forgelin                                     | 1.8.3                 | Forgelin-1.8.3.jar                                | None                                     |
+	| L     | cfm                                          | 6.2.0                 | furniture-6.2.0-1.12.2.jar                        | None                                     |
+	| L     | futureminecraf                               | 1.3.1                 | FutureVersions+v1.3.1.jar                         | None                                     |
+	| L     | trackapi                                     | 1.1                   | TrackAPI-1.1_1.12.jar                             | None                                     |
+	| L     | immersiverailroading                         | 1.6.1                 | ImmersiveRailroading-1.6.1_1.12-1138.jar          | None                                     |
+	| L     | jei                                          | 4.15.0.279            | jei_1.12.2-4.15.0.279.jar                         | None                                     |
+	| L     | littletiles                                  | 1.5.0                 | LittleTiles-Mod-1.12.2.jar                        | None                                     |
+	| L     | malisiscore                                  | 1.12.2-6.5.1-SNAPSHOT | malisiscore-1.12.2-6.5.1.jar                      | None                                     |
+	| L     | malisisblocks                                | 1.12.2-6.1.0          | malisisblocks-1.12.2-6.1.0.jar                    | None                                     |
+	| L     | malisisdoors                                 | 1.12.2-7.3.0          | malisisdoors-1.12.2-7.3.0.jar                     | None                                     |
+	| L     | minetraps                                    | 1.0.3                 | MineTraps-1.12.2-(v.1.0.3).jar                    | None                                     |
+	| L     | movingelevators                              | 1.2.32                | movingelevators-1.2.32-mc1.12.jar                 | None                                     |
+	| L     | mw                                           | 0.4.4.6               | mw_2.0-0.4.4.6_mc1.12.2.jar                       | None                                     |
+	| L     | ngtlib                                       | 2.4.18                | NGTLib2.4.18-35_forge-1.12.2-14.23.2.2611.jar     | None                                     |
+	| L     | neid                                         | 1.5.4.4               | NotEnoughIDs-1.5.4.4.jar                          | None                                     |
+	| L     | opframe                                      | 1.4.0                 | Online-Picture-Frame-Mod-1.12.2.jar               | None                                     |
+	| L     | phonesalpha                                  | v1.93                 | pa1.93r.jar                                       | None                                     |
+	| L     | harvestcraft                                 | 1.12.2zb              | Pam's+HarvestCraft+1.12.2zb.jar                   | None                                     |
+	| L     | portable_lighting                            | 1.0.0e                | Portable-Lighting-Mod-1.12.2.jar                  | None                                     |
+	| L     | realdrops                                    | 1.2.14                | RealisticItemDrops-1.2.14.jar                     | None                                     |
+	| L     | ropebridge                                   | 2.0.5                 | ropebridge-1.12-2.0.7.jar                         | None                                     |
+	| L     | rtm                                          | 2.4.21                | RTM2.4.21-40_forge-1.12.2-14.23.2.2611.jar        | None                                     |
+	| L     | scp                                          | 2.1.1                 | SCP+Lockdown-1.12.2-2.1.1-beta.jar                | None                                     |
+	| L     | secretroomsmod                               | 5.6.4                 | Secret-Rooms-Mod-1.12.2.jar                       | None                                     |
+	| L     | stevekung's_lib                              | 1.1.9                 | SteveKunG's-Lib-1.12.2-1.1.9.jar                  | None                                     |
+	| L     | techguns                                     | 2.0.1.1               | techguns-1.12.2-2.0.1.1.jar                       | None                                     |
+	| L     | thutcore                                     | 5.20.2                | thutcore-1.12.2-5.20.2.jar                        | None                                     |
+	| L     | thutcore_compat                              | 1.0                   | thutcore-1.12.2-5.20.2.jar                        | None                                     |
+	| L     | vehicle                                      | 0.44.1                | vehicle-0.44.1-mc1.12.2.jar                       | None                                     |
+	| L     | wearablebackpacks                            | 3.1.3                 | WearableBackpacks-1.12.2-3.1.3.jar                | None                                     |
+	| L     | worldedit                                    | 6.1.10-SNAPSHOT       | worldedit-forge-mc1.12.2-6.1.10-SNAPSHOT-dist.jar | None                                     |
+	| L     | xaerominimap                                 | 21.1.1                | Xaeros_Minimap_21.1.1_Forge_1.12 (1).jar          | None                                     |
+	| L     | trapexpansion                                | 1.0.0                 | trapexpansion-1.0.0.jar                           | None                                     |
+	| L     | mysticallib                                  | 1.12.2-1.2.1          | mysticallib-1.12.2-1.2.1.jar                      | None                                     |
+	| UD    | blockbuster_core                             | 2.2                   | minecraft.jar                                     | None                                     |
+	| UD    | mclib_core                                   | 2.2                   | minecraft.jar                                     | None                                     |
+
+	Loaded coremods (and transformers): 
+XaeroMinimapPlugin (Xaeros_Minimap_21.1.1_Forge_1.12 (1).jar)
+  xaero.common.core.transformer.ChunkTransformer
+  xaero.common.core.transformer.NetHandlerPlayClientTransformer
+  xaero.common.core.transformer.EntityPlayerTransformer
+  xaero.common.core.transformer.AbstractClientPlayerTransformer
+  xaero.common.core.transformer.WorldClientTransformer
+  xaero.common.core.transformer.EntityPlayerSPTransformer
+  xaero.common.core.transformer.PlayerListTransformer
+  xaero.common.core.transformer.GuiIngameForgeTransformer
+SteveKunGLibPlugin (SteveKunG's-Lib-1.12.2-1.1.9.jar)
+  
+ObfuscatePlugin (obfuscate-0.4.2-mc1.12.2.jar)
+  com.mrcrayfish.obfuscate.asm.ObfuscateTransformer
+Techguns Core (techguns-1.12.2-2.0.1.1.jar)
+  techguns.core.TechgunsASMTransformer
+McLib core mod (mclib-2.2-1.12.2.jar)
+  mchorse.mclib.core.McLibCMClassTransformer
+CreativePatchingLoader (CreativeCore_v1.9.37_mc1.12.2.jar)
+  
+CTMCorePlugin (CTM-MC1.12.2-0.3.3.22.jar)
+  team.chisel.ctm.client.asm.CTMTransformer
+LittlePatchingLoader (LittleTiles-Mod-1.12.2.jar)
+  com.creativemd.littletiles.LittleTilesTransformer
+ForgelinPlugin (Forgelin-1.8.3.jar)
+  
+Plugin (NotEnoughIDs-1.5.4.4.jar)
+  ru.fewizz.neid.asm.Transformer
+MicdoodlePlugin (MicdoodleCore-1.12.2-4.0.2.281.jar)
+  micdoodle8.mods.miccore.MicdoodleTransformer
+BlockbusterCore (blockbuster-2.2-1.12.2.jar)
+  mchorse.blockbuster.core.BBCoreClassTransformer
+SecretRoomsMod-Core (Secret-Rooms-Mod-1.12.2.jar)
+  com.wynprice.secretroomsmod.core.SecretRoomsTransformer
+MalisisCorePlugin (malisiscore-1.12.2-6.5.1.jar)
+  
+BetterFoliageLoader (BetterFoliage-MC1.12-2.2.0.jar)
+  mods.betterfoliage.loader.BetterFoliageTransformer
+weaponlib (mw_2.0-0.4.4.6_mc1.12.2.jar)
+  com.vicmatskiv.weaponlib.core.WeaponlibClassTransformer
+IGCMPatchingLoader (IGCM_v1.2.8_mc1.12.2.jar)
+  com.creativemd.igcm.core.IGCMTransformer
+MovingWorldCore (movingworld-1.12-6.342-full.jar)
+  
+ColorUtilityCorePlugin (ColorUtility-universal-1.0.4.jar)
+  com.Axeryok.ColorUtility.ColorUtilityTransformer
+LoadingPlugin (ChunkAnimator-MC1.12-1.2.jar)
+  lumien.chunkanimator.asm.ClassTransformer
+	Profiler Position: N/A (disabled)
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)
